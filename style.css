@@ -1,0 +1,242 @@
+.st0 {
+  opacity:0.13;
+  fill:#BDBDB0;
+}
+
+.st1 {
+  fill:none;
+  stroke:#939598;
+}
+
+.st2 {
+  opacity:0.34;
+  fill:none;
+  stroke:#939598;
+  stroke-width:0.25;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-miterlimit:10;
+}
+
+.st3 {
+  opacity:0.34;
+  fill:none;
+  stroke:#939598;
+  stroke-width:0.25;
+}
+
+.st4 {
+  fill: #a9a9a9;
+  stroke:#FFFFFF;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-miterlimit:10;
+}
+
+.st5 {
+  fill: #194256;
+  stroke:#FFFFFF;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-miterlimit:10;
+}
+
+.interactive {
+  margin-top: 200px;
+  width: 650px;
+  display: none;
+}
+
+#chart {
+  width: 50%;
+}
+
+/* .interactive .social-share {
+width: 20px;
+font-size: 2.6em;
+float: right;
+margin-right: 5px;
+cursor: default; }
+.interactive .social-share:hover {
+color: #333;
+cursor: pointer; }*/
+
+.element-header {
+  width: 250px;
+  background-color: #194256;
+  font-family: Verdana, sans-serif;
+  letter-spacing: 2px;
+  line-height: 160%;
+  text-align: center;
+  font-size: 1.7em;
+  margin: 20px;
+  color: #fff;
+  padding: 8px 10px 8px 10px;
+  text-transform: uppercase;
+}
+
+.element-text p {
+  font-family: Verdana, sans-serif;
+  line-height: 160%;
+  font-size: 1.6em;
+  margin: 20px;
+}
+
+.region-map svg {
+  width: 400px;
+}  
+
+.region-map-info {
+  width: 350px;
+  padding: 15px;
+}
+
+.region-map-header {
+  font-size: 1.2em;
+  color: #194256;
+  text-transform: uppercase;
+  font-family: Verdana, sans-serif;
+  line-height: 160%;
+  font-weight: 900;
+}
+
+.region-map-desc {
+  font-size: 1em;
+  font-family: Verdana, sans-serif;
+  line-height: 140%;
+}
+
+.region {
+  font-size: 1.5em;
+  font-family: Verdana, sans-serif;
+}
+
+.region:hover {
+  cursor: pointer;
+  fill: #194256;
+}
+
+.call-to-action, .loading {
+  /*margin-left: 20px;*/
+  color: #444;
+  font-family: Verdana, sans-serif;
+  font-size: 1em;
+  padding: 10px 10px 10px 0;
+}
+
+.chart_div {
+  width: 400px;
+  display: none;
+}
+
+.selected-chart {
+  display: block !important;
+}
+
+.dropdown {
+  line-height: 1.5em;
+}
+.dropdown .dropdown-container {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.dropdown .dropdown-description {
+  background: white;
+  border-bottom: 1px solid silver;
+  border-bottom-left-radius: 3px;
+  border-left: 1px solid silver;
+  border-top-left-radius: 3px;
+  border-top: 1px solid silver;
+  color: #999999;
+  float: left;
+  font-size: 0.9em;
+  line-height: 40px;
+  margin: 0;
+  padding: 0 0.5em 0 1em;
+}
+
+.dropdown .dropdown-button {
+  background: white;
+  border-bottom: 1px solid silver;
+  border-bottom-right-radius: 3px;
+  border-right: 1px solid silver;
+  border-top: 1px solid silver;
+  border-top-right-radius: 3px;
+  cursor: pointer;
+  float: right;
+  font-size: 1em;
+  line-height: 40px;
+  margin: 0;
+  padding: 0 2.5em 0 0.5em;
+  position: relative;
+}
+
+.dropdown .dropdown-button:hover {
+  background-color: #f7f7f7;
+}
+
+.dropdown .dropdown-button::after {
+  color: #333;
+  content: "▾";
+  display: block;
+  position: absolute;
+  right: 1em;
+  top: 0;
+}
+
+.dropdown .dropdown-menu {
+  background: white;
+  border: 1px solid silver;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  color: #333;
+  cursor: pointer;
+  display: none;
+  margin: 0;
+  overflow: show;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  transition: all 0.2s ease-in-out;
+  width: 228px;
+  z-index: 99999;
+}
+
+.dropdown .dropdown-menu::before {
+  color: white;
+  content: "▲";
+  font-size: 1.4em;
+  pointer-events: none;
+  text-shadow: 0 -2px 2px rgba(0, 0, 0, 0.3);
+  top: -0.7em;
+  position: absolute;
+}
+
+.dropdown .dropdown-menu li {
+  border-bottom: 1px solid silver;
+  color: #333;
+  list-style: none;
+  padding: 0.5em;
+}
+
+.dropdown .dropdown-menu li:hover {
+  background: #f7f7f7;
+}
+
+.dropdown .dropdown-menu li:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.dropdown .dropdown-menu li:last-child {
+  border: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.dropdown .show-menu {
+  display: block;
+}
