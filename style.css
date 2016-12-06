@@ -112,11 +112,6 @@ cursor: pointer; }*/
   fill: #194256;
 }
 
-.region-sub:hover {
-  cursor: pointer;
-  fill: #194256;
-}
-
 .call-to-action, .loading {
   /*margin-left: 20px;*/
   color: #444;

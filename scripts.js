@@ -10,7 +10,6 @@
   var $loading = $('#loading');
   var $interactive = $('#interactive');
   var $dropdown = $('#dropdown');
-  var $map_header = $('.region-map-header');
   var $map_desc = $('.region-map-desc');
 
   // a var to keep track of currently selected county
@@ -210,6 +209,10 @@
     // make the chart
     var chart = new google.visualization.BarChart(chart_div);
     chart.draw(data, chart_options);
+
+    // update chatter
+    $map_desc.html(counties[county].chatter);
+
   }
 
   // set callback to draw first chart
@@ -235,9 +238,6 @@
       $(this).css('fill', map_highlight_color);
     }
 
-    $map_header.html(selected_region);
-    $map_desc.html(counties[selected_region].chatter);
-
     updateViz(selected_region);
   });
 
@@ -253,6 +253,31 @@
     var selected_county = $(this).attr('data-county');    
 
     updateViz(selected_county);
+
+    // loop over regions and highlight the correct one
+
+    // reset styles
+
+    // handle one county
+    $regions.css('fill', map_default_color);
+
+    // handle mcl group, including path instead of polygon
+    $regions.find('polygon').css('fill', map_default_color);
+    $regions.find('path').css('fill', map_default_color);
+
+    $regions.each(function(d) {
+      // check for a match
+      if ($(this).attr('id') === selected_county) {
+
+        // handle if MCL
+        if (selected_county === 'Montgomery-Chambers-Liberty') {
+          $(this).find('polygon').css('fill', map_highlight_color);
+          $(this).find('path').css('fill', map_highlight_color);
+        } else {
+          $(this).css('fill', map_highlight_color);
+        }
+      }
+    });
 
     $menu.removeClass("show-menu");
     // $button.html($(this).html());
