@@ -16,6 +16,10 @@
   // a var to keep track of currently selected county
   var current_county;
 
+  // map colors
+  var map_default_color = '#a9a9a9';
+  var map_highlight_color = '#194256';
+
   // default chart options
   var chart_options = {
     chartArea: {width: '50%'},
@@ -40,7 +44,7 @@
         ['Edu. & health ****', 5000, 'color: #f66a2c', '9%' ]
       ],
       chart_title: 'Bexar County (San Antonio)',
-      chatter: ''
+      chatter: 'chatter about bexar'
     },
     'Collin': {
       chart_data: [
@@ -51,7 +55,7 @@
         ['Retail Trade', 2000, '#f66a2c', '12%' ],
       ],
       chart_title: 'Collin County (McKinney)',
-      chatter: ''
+      chatter: 'chatter about collin'
     },
     'Cameron': {
       chart_data: [
@@ -63,7 +67,7 @@
         ['Arts & Ent. *', 2000, 'color: #f66a2c', '11%' ]
       ],
       chart_title: 'Cameron County (Brownsville)',
-      chatter: ''
+      chatter: 'chatter about cameron'
     },
     'Dallas': {
       chart_data: [
@@ -75,7 +79,7 @@
        ['Other Services***', 14000, 'color: #f66a2c', '9%' ],
       ],
       chart_title: 'Dallas County (Dallas)',
-      chatter: ''
+      chatter: 'chatter about dallas'
     },
     'Denton': {
       chart_data: [
@@ -85,9 +89,9 @@
         ['Construction', 2000, 'color: #f66a2c', '13%' ],
       ],
       chart_title: 'Denton County (Denton)',
-      chatter: ''
+      chatter: 'chatter about denton'
     },
-    'El Paso': {
+    'El-Paso': {
       chart_data: [
         ['Industry', '', { role: 'style' }, { role: 'annotation' } ],
         ['Arts & Ent.*', 4000, '#f66a2c', '17%' ],
@@ -96,15 +100,15 @@
         ['Retail Trade', 2000, '#f66a2c', '12%' ],
       ],
       chart_title: 'El Paso County (McKinney)',
-      chatter: ''
+      chatter: 'chatter about el paso'
     },
-    'Fort Bend': {
+    'Fort-Bend': {
       chart_data: [
         ['Industry', '', { role: 'style' }, { role: 'annotation' } ],
         ['Construction', 3000, '#f66a2c', '19%' ]
       ],
       chart_title: 'Fort Bend County (Richmond)',
-      chatter: ''
+      chatter: 'chatter about fort bend'
     },
     'Harris': {
       chart_data: [
@@ -116,7 +120,7 @@
         ['Manufacturing', 25000, '#f66a2c', '10%' ],
       ],
       chart_title: 'Harris County (Houston)',
-      chatter: ''
+      chatter: 'chatter about harris'
     },
     'Hidalgo': {
       chart_data: [
@@ -128,7 +132,7 @@
         ['Other Services***', 6000, '#f66a2c', '11%' ],
       ],
       chart_title: 'Hidalgo County (Edinburg)',
-      chatter: ''
+      chatter: 'chatter about hidalgo'
     },
     'Montgomery-Chambers-Liberty': {
       chart_data: [
@@ -138,7 +142,7 @@
         ['Prof. & Admin**', 3000, '#f66a2c', '13%' ],
       ],
       chart_title: 'Montgomery, Chambers, and Liberty Counties (Conroe, Anahuac, Liberty)',
-      chatter: ''
+      chatter: 'chatter about mcl'
     },
     'Tarrant': {
       chart_data: [
@@ -150,7 +154,7 @@
         ['Other Services***', 5000, '#f66a2c', '7%' ],
       ],
       chart_title: 'Tarrant County (Fort Worth)',
-      chatter: ''
+      chatter: 'chatter about tarrant'
     },
     'Travis': {
       chart_data: [
@@ -162,7 +166,7 @@
        ['Retail Trade', 4000, '#f66a2c', '7%' ],
       ],
       chart_title: 'Travis County (Austin)',
-      chatter: ''
+      chatter: 'chatter about travis'
     },
     'Webb': {
       chart_data: [
@@ -174,11 +178,9 @@
         ['Other Services***', 2000, '#f66a2c', '12%' ],
       ],
       chart_title: 'Webb County (Laredo)',
-      chatter: ''
+      chatter: 'chatter about webb'
     }
   }
-
-  console.log(counties);
 
   // function to update the viz -- argument is county name
   // redraws chart, higlights correct county SVG, loads new subhead/chatter
@@ -219,8 +221,19 @@
   $regions.on('click', function(){
     var selected_region = $(this).attr('id');
 
-    $regions.find('polygon').css('fill','#a9a9a9');
-    $(this).find('polygon').css('fill','#194256');
+    // handle one county
+    $regions.css('fill', map_default_color);
+
+    // handle mcl group, including path instead of polygon
+    $regions.find('polygon').css('fill', map_default_color);
+    $regions.find('path').css('fill', map_default_color);
+
+    if (selected_region === 'Montgomery-Chambers-Liberty') {
+      $(this).find('polygon').css('fill', map_highlight_color);
+      $(this).find('path').css('fill', map_highlight_color);
+    } else {
+      $(this).css('fill', map_highlight_color);
+    }
 
     $map_header.html(selected_region);
     $map_desc.html(counties[selected_region].chatter);

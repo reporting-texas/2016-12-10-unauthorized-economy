@@ -26,11 +26,15 @@
 }
 
 .st4 {
-  fill:#F36B2D;
+  fill: #a9a9a9;
   stroke:#FFFFFF;
   stroke-linecap:round;
   stroke-linejoin:round;
   stroke-miterlimit:10;
+}
+
+.st5 {
+  fill: red;
 }
 
 .interactive {
@@ -108,9 +112,9 @@ cursor: pointer; }*/
   fill: #194256;
 }
 
-.selected-region {
+.region-sub:hover {
+  cursor: pointer;
   fill: #194256;
-  cursor: default;
 }
 
 .call-to-action, .loading {
