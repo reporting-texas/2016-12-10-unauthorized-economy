@@ -34,7 +34,11 @@
 }
 
 .st5 {
-  fill: red;
+  fill: #194256;
+  stroke:#FFFFFF;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-miterlimit:10;
 }
 
 .interactive {
