@@ -17,14 +17,14 @@
 
   // map colors
   var map_default_color = '#a9a9a9';
-  var map_highlight_color = '#194256';
+  var map_highlight_color = '#f66a2c';
 
   // default chart options
   var chart_options = {
     chartArea: {width: '50%'},
     legend: 'none',
     hAxis: {
-      title: 'Eligible unauthorized workers',
+      title: 'Unauthorized workers 16 years and older',
       minValue: 0
     },
     vAxis: {
@@ -43,7 +43,7 @@
         ['Edu. & health ****', 5000, 'color: #f66a2c', '9%' ]
       ],
       chart_title: 'Bexar County (San Antonio)',
-      chatter: 'chatter about bexar'
+      chatter: '*Arts, entertainment, recreation, accommodation, and food services<br/>**Professional, scientific, management, administrative, and waste management<br/>***Other services (except public administration)<br/>****Educational, health, and social services'
     },
     'Collin': {
       chart_data: [
@@ -54,19 +54,19 @@
         ['Retail Trade', 2000, '#f66a2c', '12%' ],
       ],
       chart_title: 'Collin County (McKinney)',
-      chatter: 'chatter about collin'
+      chatter: '*Arts, entertainment, recreation, accommodation, and food services<br/>**Professional, scientific, management, administrative, and waste management'
     },
     'Cameron': {
       chart_data: [
         ['Industry', '', { role: 'style' }, { role: 'annotation' } ],
-        ['Edu. & Health****', 3000, '#f66a2c', '17%' ],
+        ['Edu. & Health*', 3000, '#f66a2c', '17%' ],
         ['Construction', 3000, 'f66a2c', '15%' ],
         ['Prof. & admin.**', 2000, '#f66a2c', '12%' ],
         ['Other services***', 2000, '#f66a2c', '12%' ],
-        ['Arts & Ent. *', 2000, 'color: #f66a2c', '11%' ]
+        ['Arts & Ent. ****', 2000, 'color: #f66a2c', '11%' ]
       ],
       chart_title: 'Cameron County (Brownsville)',
-      chatter: 'chatter about cameron'
+      chatter: '*Educational, health, and social services<br/>**Professional, scientific, management, administrative, and waste management<br/>***Other services (except public administration)<br/>****Arts, entertainment, recreation, accommodation, and food services'
     },
     'Dallas': {
       chart_data: [
@@ -78,17 +78,17 @@
        ['Other Services***', 14000, 'color: #f66a2c', '9%' ],
       ],
       chart_title: 'Dallas County (Dallas)',
-      chatter: 'chatter about dallas'
+      chatter: '*Arts, entertainment, recreation, accommodation, and food services<br/>**Professional, scientific, management, administrative, and waste management<br/>***Other services (except public administration)'
     },
     'Denton': {
       chart_data: [
         ['Industry', '', { role: 'style' }, { role: 'annotation' } ],
-        ['Prof. & Admin**', 4000, '#f66a2c', '22%' ],
-        ['Arts & Ent.*', 2000, 'color: #f66a2c', '19%' ],
+        ['Prof. & Admin*', 4000, '#f66a2c', '22%' ],
+        ['Arts & Ent.**', 2000, 'color: #f66a2c', '19%' ],
         ['Construction', 2000, 'color: #f66a2c', '13%' ],
       ],
       chart_title: 'Denton County (Denton)',
-      chatter: 'chatter about denton'
+      chatter: '*Professional, scientific, management, administrative, and waste management<br/>**Arts, entertainment, recreation, accommodation, and food services'
     },
     'El-Paso': {
       chart_data: [
@@ -99,7 +99,7 @@
         ['Retail Trade', 2000, '#f66a2c', '12%' ],
       ],
       chart_title: 'El Paso County (McKinney)',
-      chatter: 'chatter about el paso'
+      chatter: '*Arts, entertainment, recreation, accommodation, and food services<br/>**Professional, scientific, management, administrative, and waste management'
     },
     'Fort-Bend': {
       chart_data: [
@@ -107,7 +107,7 @@
         ['Construction', 3000, '#f66a2c', '19%' ]
       ],
       chart_title: 'Fort Bend County (Richmond)',
-      chatter: 'chatter about fort bend'
+      chatter: 'Note: Limited data provided for Fort Bend County.'
     },
     'Harris': {
       chart_data: [
@@ -119,19 +119,19 @@
         ['Manufacturing', 25000, '#f66a2c', '10%' ],
       ],
       chart_title: 'Harris County (Houston)',
-      chatter: 'chatter about harris'
+      chatter: '*Arts, entertainment, recreation, accommodation, and food services<br/>**Professional, scientific, management, administrative, and waste management<br/>***Other services (except public administration)'
     },
     'Hidalgo': {
       chart_data: [
         ['Industry', '', { role: 'style' }, { role: 'annotation' } ],
         ['Construction', 9000, '#f66a2c', '17%' ],
-        ['Edu. & Health****', 8000, '#f66a2c', '14%' ],
+        ['Edu. & Health*', 8000, '#f66a2c', '14%' ],
         ['Retail Trade', 7000, '#f66a2c', '14%' ],
         ['Prof. & Admin**', 7000, '#f66a2c', '12%' ],
         ['Other Services***', 6000, '#f66a2c', '11%' ],
       ],
       chart_title: 'Hidalgo County (Edinburg)',
-      chatter: 'chatter about hidalgo'
+      chatter: '*Educational, health, and social services<br/>**Professional, scientific, management, administrative, and waste management<br/>***Other services (except public administration)'
     },
     'Montgomery-Chambers-Liberty': {
       chart_data: [
@@ -141,7 +141,7 @@
         ['Prof. & Admin**', 3000, '#f66a2c', '13%' ],
       ],
       chart_title: 'Montgomery, Chambers, and Liberty Counties (Conroe, Anahuac, Liberty)',
-      chatter: 'chatter about mcl'
+      chatter: '*Arts, entertainment, recreation, accommodation, and food services<br/>**Professional, scientific, management, administrative, and waste management'
     },
     'Tarrant': {
       chart_data: [
@@ -153,7 +153,7 @@
         ['Other Services***', 5000, '#f66a2c', '7%' ],
       ],
       chart_title: 'Tarrant County (Fort Worth)',
-      chatter: 'chatter about tarrant'
+      chatter: '*Arts, entertainment, recreation, accommodation, and food services<br/>**Professional, scientific, management, administrative, and waste management<br/>***Other services (except public administration)'
     },
     'Travis': {
       chart_data: [
@@ -165,19 +165,19 @@
        ['Retail Trade', 4000, '#f66a2c', '7%' ],
       ],
       chart_title: 'Travis County (Austin)',
-      chatter: 'chatter about travis'
+      chatter: '*Arts, entertainment, recreation, accommodation, and food services<br/>**Professional, scientific, management, administrative, and waste management<br/>***Other services (except public administration)'
     },
     'Webb': {
       chart_data: [
         ['Industry', '', { role: 'style' }, { role: 'annotation' } ],
         ['Construction', 2000, '#f66a2c', '14%' ],
-        ['Edu. & Health****', 2000, '#f66a2c', '13%' ],
-        ['Arts & Ent.*', 2000, '#f66a2c', '13%' ],
+        ['Edu. & Health*', 2000, '#f66a2c', '13%' ],
+        ['Arts & Ent.**', 2000, '#f66a2c', '13%' ],
         ['Transp. & Warehousing', 2000, '#f66a2c', '13%' ],
         ['Other Services***', 2000, '#f66a2c', '12%' ],
       ],
       chart_title: 'Webb County (Laredo)',
-      chatter: 'chatter about webb'
+      chatter: 'Note: All industries total 2,000 unauthorized workers, but percentage of workers by industry varies.<br/><br/>*Educational, health, and social services<br/>**Arts, entertainment, recreation, accommodation, and food services<br/>***Other services (except public administration)'
     }
   }
 

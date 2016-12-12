@@ -34,7 +34,7 @@
 }
 
 .st5 {
-  fill: #194256;
+  fill: #f66a2c;
   stroke:#FFFFFF;
   stroke-linecap:round;
   stroke-linejoin:round;
@@ -101,9 +101,11 @@ cursor: pointer; }*/
 }
 
 .region-map-desc {
-  font-size: 1em;
+  font-size: 0.7em;
   font-family: Verdana, sans-serif;
   line-height: 140%;
+  color: #a9a9a9;
+  padding-top: 15px;
 }
 
 .region {
