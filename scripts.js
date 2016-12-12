@@ -1,6 +1,8 @@
 (function($) {
   'use strict';
 
+  var pymChild = new pym.Child();
+
   // load charts and the corechart package
   google.charts.load('current', {'packages':['corechart']});
 
