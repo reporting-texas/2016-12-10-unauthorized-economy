@@ -1,8 +1,6 @@
 (function($) {
   'use strict';
 
-  var pymChild = new pym.Child();
-
   // load charts and the corechart package
   google.charts.load('current', {'packages':['corechart']});
 
@@ -220,6 +218,7 @@
   // set callback to draw first chart
   google.charts.setOnLoadCallback(function() {
     updateViz('Travis');
+    pymChild.sendHeight();
   });
 
   // click event for SVG els
@@ -289,5 +288,7 @@
 
   $loading.hide();
   $interactive.show();
+
+  var pymChild = new pym.Child();
 
 })(jQuery);
